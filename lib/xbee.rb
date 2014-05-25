@@ -1,0 +1,6 @@
+require 'xbee/version'
+require 'xbee/api_frame'
+require 'xbee/data_parsers'
+require 'xbee/base'
+require 'xbee/ieee'
+require 'xbee/zigbee'

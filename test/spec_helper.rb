@@ -1,0 +1,5 @@
+require 'rubygems'
+require 'bundler/setup'
+require 'xbee'
+require 'minitest'
+require 'minitest/autorun'
