@@ -20,25 +20,25 @@ Documentation
 Example
 -------
 
-    #!ruby
-    require 'xbee'
-    require 'serialport'
+```ruby
+require 'xbee'
+require 'serialport'
 
-    serial = SerialPort.new "/dev/tty.usbserial-A95L5ZJN", 9600
-    client = Xbee::ZigBee.new(serial, :escaped => true)
+serial = SerialPort.new "/dev/tty.usbserial-A95L5ZJN", 9600
+client = Xbee::ZigBee.new(serial, :escaped => true)
 
-    Thread.new do
-      while true do
-        frame = client.wait_read_frame
-        p frame
-      end
-    end
+Thread.new do
+  while true do
+    frame = client.wait_read_frame
+    p frame
+  end
+end
 
-    %w(id my ni dd ch op pl).each do |cmd|
-      client.at(:command => cmd)
-      sleep 1
-    end
-
+%w(id my ni dd ch op pl).each do |cmd|
+  client.at(:command => cmd)
+  sleep 1
+end
+```
 
 Contributors
 ------------
