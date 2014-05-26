@@ -20,6 +20,7 @@ Documentation
 Example
 -------
 
+    #!ruby
     require 'xbee'
     require 'serialport'
 
