@@ -48,7 +48,7 @@ describe Xbee::Base do
 
   subject { Xbee::Base.new(@serial) }
 
-  describe ".build_command" do
+  describe "#build_command" do
     it "raises an exception when command is not implemented" do
       assert_raises(RuntimeError) {
         subject.build_command(:xyz)
@@ -75,7 +75,7 @@ describe Xbee::Base do
     end
   end
 
-  describe ".write" do
+  describe "#write" do
     it "writes data (API frame output) to a serial port" do
       data = "\x00"
       @serial.expect :write, true, [Xbee::ApiFrame.new(data).output]
@@ -84,7 +84,7 @@ describe Xbee::Base do
     end
   end
 
-  describe ".wait_for_frame" do
+  describe "#wait_for_frame" do
     it "reads serial port until valid frame arrives" do
     end
   end

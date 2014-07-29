@@ -7,13 +7,13 @@ describe Xbee::ZigBee do
 
   subject { Xbee::ZigBee.new(@serial) }
 
-  describe ".parse_samples_header" do
+  describe "#parse_samples_header" do
     it "parses 4 bytes header" do
       assert_equal subject.parse_samples_header("\x01\x01\x01\x01"), [1, [0], [0], 1, 4]
     end
   end
 
-  describe ".parse_is_at_response" do
+  describe "#parse_is_at_response" do
     it "parses zigbee ATIS response" do
       info = {
         :id => :at_response,
@@ -28,7 +28,7 @@ describe Xbee::ZigBee do
     end
   end
 
-  describe ".parse_nd_at_response" do
+  describe "#parse_nd_at_response" do
     it "parses zigbee ATND response" do
       info = {
         :id => :at_response,
@@ -50,7 +50,7 @@ describe Xbee::ZigBee do
     end
   end
 
-  describe ".method_missing" do
+  describe "#method_missing" do
     describe "ATID command" do
       it "builds a command frame and writes to serial port" do
         @serial.expect :write, true, ["\x7E\x00\x04\x08\x01\x49\x44\x69"]

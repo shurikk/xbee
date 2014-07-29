@@ -17,6 +17,16 @@ Documentation
 * [ZigBee commands and response](http://rubydoc.info/gems/xbee/Xbee/IEEE.html)
 * [List of AT commands](http://examples.digi.com/wp-content/uploads/2012/07/XBee_ZB_ZigBee_AT_Commands.pdf)
 
+
+Tools & Resources
+-----------------
+
+X-CTU alternatives
+
+* [XBee communication libraries and utilities](https://github.com/roysjosh/xbee-comm)
+* [Moltosenso Iron 1.0](http://www.moltosenso.com/#/pc==/client/fe/download.php)
+
+
 Example
 -------
 
